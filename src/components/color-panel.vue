@@ -1,5 +1,5 @@
 <template>
-  <section class="color-cell" :style="{ borderLeft: `7px solid ${hex}` }">
+  <section class="color-cell" :style="{ borderLeft: `7px solid ${hex}` }" @click="() => handleClick(hex)" >
     <p class="color-name">{{ name }}</p>
     <div class="color-bar red" :style="`--color: ${R}`"></div>
     <span class="color-bar green" :style="`--color: ${G}`"></span>
@@ -9,15 +9,42 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+// import { ref } from 'vue'
 
 defineProps({
   name: String,
-  R: String,
-  G: String,
-  B: String,
+  R: Number,
+  G: Number,
+  B: Number,
   hex: String,
 })
+
+const handleClick = (hex) => {
+  handleCopy(hex);
+  changeBgColor(hex);
+}
+
+const handleCopy = (hex) => {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(hex);
+  } else {
+    const text = document.createElement('textarea');
+    text.value = hex;
+    text.style.position = 'absolute';
+    text.style.opacity = 0;
+    text.style.left = '-999999px';
+    text.style.top = '-999999px';
+    document.body.appendChild(text);
+    text.focus();
+    text.select();
+    document.execCommand('copy');
+    text.remove();
+  }
+}
+
+const changeBgColor = (hex) => {
+  document.querySelector('body').style.setProperty('--bg-color', hex);
+}
 
 </script>
 
@@ -25,7 +52,7 @@ defineProps({
   .color-cell {
     flex-shrink: 0;
     width: 160px;
-    height: 62px;
+    height: 54px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -38,7 +65,7 @@ defineProps({
     cursor: pointer;
     will-change: background, opacity;
     transition: background 1s, opacity 1s;
-    padding: 4px 0.8rem 4px 0.8rem;
+    padding: 8px 0.8rem 8px 0.8rem;
   }
 
   .color-cell:hover {
@@ -50,7 +77,9 @@ defineProps({
   }
 
   .color-hex {
-    margin-top: 4px
+    margin-top: 4px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
   }
 
   .color-bar {
