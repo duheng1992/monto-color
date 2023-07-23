@@ -1,9 +1,15 @@
 <template>
-  <section class="flex-between">
-    <section class="color-layout">
-      <ColorPanel class="color-item" v-for="color in redColors" :hex="color.hex" :name="color.name" :R="color.R" :G="color.G" :B="color.B" />
+  <section class="flex-layout">
+    <section>
+      中国色卡
+      <ColorConvert class="color-convert" />
     </section>
-    <ColorConvert />
+    <section>
+      <h1>红色系</h1>
+      <section class="color-panel">
+        <ColorPanel class="color-item" v-for="color in redColors" :hex="color.hex" :name="color.name" :R="color.R" :G="color.G" :B="color.B" />
+      </section>
+    </section>
   </section>
 </template>
 
@@ -15,21 +21,47 @@ import { redColors } from './util/const';
 </script>
 
 <style scoped>
-.flex-between {
-  padding: 100px;
+
+.flex-layout {
   display: flex;
-  justify-content: space-between;
+
 }
 
-.color-layout {
+.color-panel {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 80vw;;
+  width: 70vw;;
 }
 
 .color-item {
   margin-right: 0.8rem;
   margin-bottom: 1rem;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .flex-layout {
+    padding: 100px;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .flex-layout {
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .color-convert {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .color-panel {
+    width: 100vw;
+  }
 }
 </style>
