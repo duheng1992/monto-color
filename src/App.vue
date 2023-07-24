@@ -1,30 +1,46 @@
 <template>
   <section class="flex-layout">
     <section>
-      中国色卡
+      <h1 class="main-title">中式色卡</h1>
+      {{ color }}
       <ColorConvert class="color-convert" />
     </section>
     <section>
-      <h1>红色系</h1>
+      <h1 class="sub-title">红色系</h1>
       <section class="color-panel">
-        <ColorPanel class="color-item" v-for="color in redColors" :hex="color.hex" :name="color.name" :R="color.R" :G="color.G" :B="color.B" />
+        <ColorPanel class="color-item" v-for="color in redColors" :hex="color.hex" :name="color.name" :R="color.R" :G="color.G" :B="color.B" :handleSelect="handleSelect" />
       </section>
     </section>
   </section>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import ColorConvert from './components/color-convert.vue';
 import ColorPanel from './components/color-panel.vue';
 
-import { redColors } from './util/const'; 
+import { redColors } from './util/const';
+
+const color = ref();
+
+const handleSelect = hex => {
+  color.value = hex;
+}
 </script>
 
 <style scoped>
 
 .flex-layout {
   display: flex;
+  justify-content: space-between;
+}
 
+.main-title {
+  font-size: 48px;
+}
+
+.sub-title {
+  font-size: 24px;
 }
 
 .color-panel {
@@ -43,7 +59,6 @@ import { redColors } from './util/const';
 @media screen and (min-width: 1000px) {
   .flex-layout {
     padding: 100px;
-    justify-content: space-between;
   }
 }
 
@@ -51,7 +66,6 @@ import { redColors } from './util/const';
   .flex-layout {
     padding: 20px;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .color-convert {

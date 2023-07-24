@@ -1,7 +1,7 @@
 <template>
   <section class="color-cell" :style="{ borderLeft: `7px solid ${hex}` }" @click="() => handleClick(hex)">
     <p class="color-name">{{ name }}</p>
-    <div class="color-bar red" :style="`--color: ${R}`"></div>
+    <span class="color-bar red" :style="`--color: ${R}`"></span>
     <span class="color-bar green" :style="`--color: ${G}`"></span>
     <span class="color-bar blue" :style="`--color: ${B}`"></span>
     <p class="color-hex">{{ hex }}</p>
@@ -11,17 +11,19 @@
 <script setup>
 // import { ref } from 'vue'
 
-defineProps({
+const props = defineProps({
   name: String,
   R: Number,
   G: Number,
   B: Number,
   hex: String,
+  handleSelect: Function
 })
 
 const handleClick = (hex) => {
   handleCopy(hex);
   changeBgColor(hex);
+  props.handleSelect && props.handleSelect(hex);
 }
 
 const handleCopy = (hex) => {
@@ -45,7 +47,6 @@ const handleCopy = (hex) => {
 const changeBgColor = (hex) => {
   document.querySelector('body').style.setProperty('--bg-color', hex);
 }
-
 </script>
 
 <style scoped>
@@ -80,13 +81,14 @@ const changeBgColor = (hex) => {
   margin-top: 4px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
+  font-size: 12px;
 }
 
 .color-bar {
   position: relative;
   display: block;
   background-color: #fff6;
-  height: 1px;
+  min-height: 1px;
   width: 80%;
   margin: 2px 0;
 }
