@@ -23,7 +23,7 @@ const props = defineProps({
 const handleClick = (hex) => {
   handleCopy(hex);
   changeBgColor(hex);
-  props.handleSelect && props.handleSelect(hex);
+  props.handleSelect && props.handleSelect();
 }
 
 const handleCopy = (hex) => {
@@ -116,7 +116,7 @@ const changeBgColor = (hex) => {
 
 @media screen and (max-width: 600px) {
   .color-cell {
-    width: 130px;
+    width: 110px;
   }
 }
 </style>

@@ -219,7 +219,40 @@ const redColors = [
     { key: 'jghh', name: '鸡冠花红', R: 106, G: 0, B:38 },
     { key: 'zh', name: '紫红', R: 123, G: 0, B:34 },
     { key: 'zh', name: '枣红', R: 104, G: 0, B:24 },
-    { key: 'zh', name: '枣红', R: 104, G: 0, B:24 },
+    { key: 'ycs', name: '鸢茶色', R: 119, G: 68, B:37 },
+    { key: 'lps', name: '栗皮色', R: 107, G: 67, B:69 },
+    { key: 'hlcs', name: '海老茶色', R: 119, G: 40, B:38 },
+    { key: 'xhs', name: '茜红色', R: 147, G: 27, B:60 },
+    { key: 'sfs', name: '苏芳色', R: 115, G: 15, B:56 },
+    { key: 'zf', name: '紫锋', R: 104, G: 0, B:24 },
+    { key: 'jz', name: '京紫', R: 83, G: 42, B:86 },
+    { key: 'qnz', name: '牵牛紫', R: 100, G: 12, B:83 },
+    { key: 'zz', name: '枣紫', R: 94, G: 0, B:0 },
+    { key: 'hz', name: '黑紫', R: 78, G: 0, B:0 },
+    { key: 'qz', name: '绀紫', R: 66, G: 0, B:37 },
+    { key: 'azyh', name: '暗紫苑红', R: 128, G: 25, B:43 },
+    { key: 'qpz', name: '茄皮紫', R: 51, G: 13, B:31 },
+    { key: 'grs', name: '瓜瓤色', R: 216, G: 136, B:95 },
+    { key: 'ms', name: '暮色', R: 198, G: 112, B:69 },
+    { key: 'ds', name: '丹色', R: 201, G: 122, B:62 },
+    { key: 'mhs', name: '木红色', R: 157, G: 96, B:69 },
+    { key: 'amsc', name: '爱马仕橙', R: 211, G: 115, B:45 },
+    { key: 'zs', name: '赭色', R: 165, G: 74, B:47 },
+    { key: 'zs', name: '曙色', R: 176, G: 72, B:17 },
+    { key: 'blh', name: '菠萝红', R: 212, G: 120, B:62 },
+    { key: 'mjh', name: '莓酱红', R: 207, G: 100, B:50 },
+    { key: 'slh', name: '石榴红', R: 185, G: 36, B:62 },
+    { key: 'zjs', name: '朱瑾', R: 200, G: 59, B:45 },
+    { key: 'xyh', name: '夕阳红', R: 200, G: 59, B:39 },
+    { key: 'js', name: '绛色', R: 173, G: 18, B:27 },
+    { key: 'egh', name: '鹅冠红', R: 192, G: 42, B:48 },
+    { key: 'ohs', name: '藕合色', R: 240, G: 212, B:188 },
+    { key: 'mjh', name: '满江红', R: 162, G: 84, B:86 },
+    { key: 'dms', name: '玳瑁色', R: 114, G: 62, B:55 },
+    { key: 'exsh', name: '鹅血石红', R: 166, G: 59, B:48 },
+    { key: 'dds', name: '淡豆沙', R: 133, G: 60, B:36 },
+    { key: 'cs', name: '茶色', R: 125, G: 55, B:40 },
+    { key: 'hs', name: '褐色', R: 125, G: 66, B:0 },
 ]
 
 const rgbToHex = (r, g, b) => {
@@ -239,5 +272,5 @@ redColors.forEach(item => {
     item.hex = rgbToHex(item.R, item.G, item.B);
 })
 
-console.log(redColors);
+
 fs.writeFile('./src/util/colors.txt', JSON.stringify(redColors), null, () => {})
