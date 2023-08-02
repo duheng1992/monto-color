@@ -253,7 +253,45 @@ const redColors = [
     { key: 'dds', name: '淡豆沙', R: 133, G: 60, B:36 },
     { key: 'cs', name: '茶色', R: 125, G: 55, B:40 },
     { key: 'hs', name: '褐色', R: 125, G: 66, B:0 },
-]
+];
+
+const yellowColors = [
+    { key: 'yellow_10', name: '黄色 10%', R: 255, G: 254, B: 238 },
+    { key: 'yellow_20', name: '黄色 20%', R: 255, G: 252, B: 219 },
+    { key: 'yellow_30', name: '黄色 30%', R: 255, G: 251, B: 200 },
+    { key: 'yellow_50', name: '黄色 50%', R: 255, G: 247, B: 157 },
+    { key: 'yellow_60', name: '黄色 60%', R: 255, G: 245, B: 134 },
+    { key: 'yellow_80', name: '黄色 80%', R: 255, G: 242, B: 83 },
+    { key: 'yellow_100', name: '安全黄色', R: 255, G: 240, B: 0 },
+    { key: 'rh', name: '乳黄', R: 253, G: 246, B: 214 },
+    { key: 'fcf', name: '富春坊', R: 252, G: 243, B: 196 },
+    { key: 'rhs', name: '乳褐色', R: 240, G: 229, B: 203 },
+    { key: 'ymh', name: '玉米黄', R: 238, G: 223, B: 189 },
+    { key: 'dmc', name: '大麦彩', R: 232, G: 221, B: 185 },
+    { key: 'zh', name: '枝黄', R: 226, G: 215, B: 185 },
+    { key: 'ms', name: '米色', R: 220, G: 202, B: 169 },
+    { key: 'xyh', name: '象牙黄', R: 252, G: 243, B: 196 },
+    { key: 'xjh', name: '小鸠黄', R: 244, G: 238, B: 194 },
+    { key: 'ys', name: '牙色', R: 237, G: 228, B: 180 },
+    { key: 'gch', name: '甘草黄', R: 233, G: 219, B: 167 },
+    { key: 'hbh', name: '黄百合', R: 240, G: 234, B: 182 },
+    { key: 'zlz', name: '蒸栗子', R: 218, G: 209, B: 142 },
+    { key: 'mlc', name: '木兰彩', R: 211, G: 199, B: 166 },
+    { key: 'zls', name: '蒸栗色', R: 246, G: 242, B: 200 },
+    { key: 'dls', name: '淡卵色', R: 253, G: 243, B: 180 },
+    { key: 'dh', name: '淡黄', R: 248, G: 236, B: 165 },
+    { key: 'bc', name: '白茶', R: 232, G: 217, B: 166 },
+    { key: 'js', name: '肌色', R: 242, G: 218, B: 195 },
+    { key: 'dxs', name: '淡香色', R: 238, G: 205, B: 158 },
+    { key: 'xjh', name: '香蕉黄', R: 219, G: 211, B: 116 },
+    { key: 'ls', name: '梨色', R: 244, G: 220, B: 175 },
+    { key: 'scs', name: '沙茶色', R: 234, G: 211, B: 172 },
+    { key: 'js', name: '绢色', R: 226, G: 200, B: 153 },
+    { key: 'fs', name: '肤色', R: 234, G: 193, B: 116 },
+    { key: 'scs', name: '沙尘色', R: 202, G: 181, B: 144 },
+    { key: 'ms', name: '麦色', R: 196, G: 175, B: 131 },
+    { key: 'ks', name: '枯色', R: 182, G: 159, B: 117 },
+];
 
 const rgbToHex = (r, g, b) => {
     const componentToHex = (c) => {
@@ -268,9 +306,9 @@ const rgbToHex = (r, g, b) => {
     return "#" + red + green + blue;
 }
 
-redColors.forEach(item => {
+yellowColors.forEach(item => {
     item.hex = rgbToHex(item.R, item.G, item.B);
 })
 
 
-fs.writeFile('./src/util/colors.txt', JSON.stringify(redColors), null, () => {})
+fs.writeFile('./src/util/colors.txt', JSON.stringify(yellowColors), null, () => {})

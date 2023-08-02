@@ -1,11 +1,11 @@
 <template>
-    <section>
-        <input type="number" class="short-input" v-model="r" />
-        <input type="number" class="short-input" v-model="g" />
-        <input type="number" class="short-input" v-model="b" />
-        <button @click="rgbToHex">RGB to HEX</button>
+    <section class="convert-panel" :style="{ backgroundColor: `${getContrastColor(hex)}` }">
+        <input type="number" class="short-input mr-4" v-model="r" placeholder="r" min="0" max="255" />
+        <input type="number" class="short-input mr-4" v-model="g" placeholder="g" min="0" max="255" />
+        <input type="number" class="short-input mr-4" v-model="b" placeholder="b" min="0" max="255" />
+        <button class="button" @click="rgbToHex">RGB 转 HEX</button>
         <input type="text" v-model="hex" />
-        <button @click="hexToRgb">HEX to RGB</button>
+        <button class="button" @click="hexToRgb">HEX 转 RGB</button>
 
         <p>{{ result }}</p>
     </section>
@@ -13,6 +13,7 @@
   
 <script setup>
 import { ref } from 'vue';
+import { getContrastColor } from '../util/const';
 
 const r = ref('');
 const g = ref('');
@@ -46,7 +47,18 @@ const hexToRgb = () => {
 </script>
   
 <style scoped>
+.convert-panel {
+    padding: 36px;
+    backdrop-filter: blur(20px);
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.822); /* 添加白色投影效果 */
+}
 .short-input {
     width: 50px;
+}
+
+.button {
+    display: block;
+    margin: 12px 0;
 }
 </style>

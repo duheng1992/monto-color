@@ -76,6 +76,8 @@ const handleSelectColor = color => {
 }
 
 .sub-title {
+  display: flex;
+  align-items: center;
   font-size: 24px;
 }
 
@@ -87,6 +89,14 @@ const handleSelectColor = color => {
 .color-item {
   margin-right: 0.8rem;
   margin-bottom: 1rem;
+}
+
+/* ::v-slots {
+
+} */
+
+select {
+  margin-left: 12px;
 }
 
 @media screen and (min-width: 1000px) {
