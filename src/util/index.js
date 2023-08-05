@@ -291,9 +291,86 @@ const yellowColors = [
     { key: 'scs', name: '沙尘色', R: 202, G: 181, B: 144 },
     { key: 'ms', name: '麦色', R: 196, G: 175, B: 131 },
     { key: 'ks', name: '枯色', R: 182, G: 159, B: 117 },
+    { key: 'mls', name: '茉莉色', R: 247, G: 247, B: 209 },
+    { key: 'xbh', name: '香槟黄', R: 240, G: 232, B: 170 },
+    { key: 'ylh', name: '月亮黄', R: 252, G: 236, B: 107 },
+    { key: 'xhs', name: '鲜黄色', R: 252, G: 233, B: 25 },
+    { key: 'lqh', name: '连翘黄', R: 234, G: 204, B: 80 },
+    { key: 'ahs', name: '暗黄色', R: 216, G: 201, B: 0 },
+    { key: 'ls', name: '卵色', R: 245, G: 220, B: 125 },
+    { key: 'nqh', name: '浓浅黄', R: 244, G: 218, B: 139 },
+    { key: 'yt', name: '杨桃', R: 241, G: 237, B: 136 },
+    { key: 'ycs', name: '樱草', R: 238, G: 234, B: 86 },
+    { key: 'sfs', name: '松粉', R: 229, G: 231, B: 111 },
+    { key: 'mlh', name: '茉莉黄', R: 229, G: 206, B: 118 },
+    { key: 'nlh', name: '女郎花', R: 222, G: 215, B: 80 },
+    { key: 'nmh', name: '柠檬黄', R: 218, G: 210, B: 80 },
+    { key: 'bh', name: '白黄', R: 247, G: 241, B: 174 },
+    { key: 'qh', name: '浅黄', R: 247, G: 238, B: 130 },
+    { key: 'jhh', name: '金合欢', R: 229, G: 211, B: 81 },
+    { key: 'hfy', name: '黄枫叶', R: 216, G: 190, B: 68 },
+    { key: 'sh', name: '深黄', R: 226, G: 200, B: 15 },
+    { key: 'sh', name: '沙黄', R: 234, G: 208, B: 158 },
+    { key: 'th', name: '桃黄', R: 213, G: 162, B: 103 },
+    { key: 'njh', name: '嫩姜黄', R: 252, G: 238, B: 129 },
+    { key: 'jh', name: '姜黄', R: 247, G: 230, B: 119 },
+    { key: 'sgh', name: '丝瓜花', R: 252, G: 236, B: 100 },
+    { key: 'ch', name: '菜花', R: 245, G: 224, B: 93 },
+    { key: 'ehs', name: '鹅黄色', R: 244, G: 230, B: 54 },
+    { key: 'qxs', name: '秋香色', R: 211, G: 187, B: 29 },
+    { key: 'nyc', name: '嫩芽彩', R: 208, G: 205, B: 170 },
+    { key: 'ch', name: '草黄', R: 246, G: 230, B: 60 },
+    { key: 'omh', name: '欧曼黄', R: 240, G: 204, B: 0 },
+    { key: 'cj', name: '赤金', R: 238, G: 200, B: 64 },
+    { key: 'th', name: '藤黄', R: 238, G: 199, B: 61 },
+    { key: 'jqhh', name: '金雀花黄', R: 230, G: 199, B: 53 },
+    { key: 'hy', name: '花叶', R: 238, G: 201, B: 94 },
+    { key: 'yzs', name: '玉镯黍', R: 229, G: 191, B: 95 },
+    { key: 'dhs', name: '淡黄色', R: 249, G: 233, B: 181 },
+    { key: 'qts', name: '浅土色', R: 232, G: 204, B: 100 },
+    { key: 'gh', name: '铬黄', R: 241, G: 207, B: 0 },
+    { key: 'pph', name: '枇杷黄', R: 234, G: 189, B: 0 },
+    { key: 'jzh', name: '金盏花', R: 228, G: 170, B: 1 },
+    { key: 'kjs', name: '卡机色', R: 165, G: 135, B: 52 },
+    { key: 'ts', name: '土色', R: 181, G: 142, B: 0 },
+    { key: 'qjh', name: '秋菊黄', R: 251, G: 236, B: 152 },
+    { key: 'hxc', name: '含羞草', R: 229, G: 211, B: 81 },
+    { key: 'js', name: '金色', R: 207, G: 179, B: 0 },
+    { key: 'lyh', name: '落叶黄', R: 214, G: 163, B: 17 },
+    { key: 'jzs', name: '芥子色', R: 208, G: 196, B: 103 },
+    { key: 'xms', name: '小麦色', R: 172, G: 155, B: 87 },
+    { key: 'hhs', name: '黄褐色', R: 143, G: 122, B: 29 },
+    { key: 'dyh', name: '淡月黄', R: 255, G: 244, B: 109 },
+    { key: 'zgh', name: '中国黄', R: 232, G: 217, B: 0 },
+    { key: 'hjh', name: '灰菊黄', R: 224, G: 220, B: 165 },
+    { key: 'nblsh', name: '那不勒斯黄', R: 211, G: 203, B: 84 },
+    { key: 'tzh', name: '土著黄', R: 179, G: 166, B: 65 },
+    { key: 'skjb', name: '深卡机布', R: 130, G: 117, B: 35 },
+    { key: 'shs', name: '深褐色', R: 107, G: 90, B: 0 },
+    { key: 'jsq', name: '金丝雀', R: 247, G: 238, B: 70 },
+    { key: 'yjs', name: '郁金香', R: 232, G: 217, B: 0 },
+    { key: 'dqxy', name: '淡青朽叶', R: 201, G: 184, B: 81 },
+    { key: 'ys', name: '油色', R: 209, G: 185, B: 58 },
+    { key: 'ssbc', name: '桑色白茶', R: 206, G: 208, B: 156 },
+    { key: 'hzs', name: '灰汁色', R: 198, G: 184, B: 151 },
+    { key: 'gs', name: '干色', R: 198, G: 170, B: 110 },
+    { key: 'dfs', name: '砥粉色', R: 226, G: 187, B: 128 },
+    { key: 'ysss', name: '玉蜀黍色', R: 238, G: 202, B: 125 },
+    { key: 'nyh', name: '奶油黄', R: 236, G: 196, B: 101 },
+    { key: 'jc', name: '金茶', R: 224, G: 167, B: 82 },
+    { key: 'xs', name: '香色', R: 222, G: 172, B: 141 },
+    { key: 'hlc', name: '海螺橙', R: 219, G: 146, B: 92 },
+    { key: 'lys', name: '落叶色', R: 199, G: 175, B: 110 },
 ];
 
-const rgbToHex = (r, g, b) => {
+export const  getContrastColor = (color) => {
+    const r = 255 - parseInt(color.substr(1, 2), 16);
+    const g = 255 - parseInt(color.substr(3, 2), 16);
+    const b = 255 - parseInt(color.substr(5, 2), 16);
+    return "#" + r.toString(16).padStart(2, "0") + g.toString(16).padStart(2, "0") + b.toString(16).padStart(2, "0");
+}  
+
+export const rgbToHex = (r = 0, g = 0, b = 0) => {
     const componentToHex = (c) => {
         const hex = c.toString(16);
         return hex.length === 1 ? "0" + hex : hex;
@@ -306,9 +383,22 @@ const rgbToHex = (r, g, b) => {
     return "#" + red + green + blue;
 }
 
-yellowColors.forEach(item => {
-    item.hex = rgbToHex(item.R, item.G, item.B);
-})
+export const hexToRgb = (hex) => {
+    const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    const thex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
+    const tresult = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(thex);
+    if (tresult && tresult.length > 3) {
+        return {
+            r: parseInt(tresult[1], 16),
+            g: parseInt(tresult[2], 16), 
+            b: parseInt(tresult[3], 16)
+        }
+    }
+}
+
+// yellowColors.forEach(item => {
+//     item.hex = rgbToHex(item.R, item.G, item.B);
+// })
 
 
-fs.writeFile('./src/util/colors.txt', JSON.stringify(yellowColors), null, () => {})
+// fs.writeFile('./src/util/colors.txt', JSON.stringify(yellowColors), null, () => {})

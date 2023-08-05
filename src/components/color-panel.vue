@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-// import { ref } from 'vue'
+import { getContrastColor } from '../util'
 
 const props = defineProps({
   name: String,
@@ -46,6 +46,7 @@ const handleCopy = (hex) => {
 
 const changeBgColor = (hex) => {
   document.querySelector('body').style.setProperty('--bg-color', hex);
+  document.querySelector('body').style.setProperty('--font-color', getContrastColor(hex));
 }
 </script>
 

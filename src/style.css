@@ -1,5 +1,6 @@
 :root {
   --bg-color: rgb(205, 209, 211);
+  --font-color: rgb(86, 88, 89);
 }
 
 @font-face {
@@ -12,7 +13,7 @@ body {
   padding: 0;
   font-size: 14px;
   background-color: var(--bg-color);
-  color: rgb(86, 88, 89);
+  color: var(--font-color);
   will-change: background;
   transition: background 1s;
   font-family: 'monto-color';
