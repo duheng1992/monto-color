@@ -15,8 +15,7 @@
         {{ currentTab.name }}
         <select :onChange="handleSelectColor">
           <optgroup label="中式色卡">
-            <option label="红色系" value="red">红色系</option>
-            <option label="黄色系" value="yellow">黄色系</option>
+            <option v-for="color in colorList" :label="color.name" :value="color.key">{{ color.name }}</option>
           </optgroup>
         </select>
       </h1>
@@ -33,11 +32,12 @@ import { ref } from 'vue';
 import ColorConvert from './components/color-convert.vue';
 import ColorPanel from './components/color-panel.vue';
 
-import { redColors, yellowColors } from './util/const';
+import { redColors, yellowColors, greenColors } from './util/const';
 
 const colorList = [
   { name: '红色系', key: 'red', value: redColors },
   { name: '黄色系', key: 'yellow', value: yellowColors },
+  { name: '绿色系', key: 'green', value: greenColors },
 ];
 
 const currentTab = ref(colorList[0]);
