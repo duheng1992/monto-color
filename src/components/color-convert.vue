@@ -38,6 +38,7 @@ const handleRgb = (r, g, b) => {
     backdrop-filter: blur(20px);
     opacity: 0.8;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.822); /* 添加白色投影效果 */
+    font-family: 'Times New Roman', Times, serif;
 }
 .short-input {
     width: 50px;

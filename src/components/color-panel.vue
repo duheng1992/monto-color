@@ -1,5 +1,5 @@
 <template>
-  <section class="color-cell" :style="{ borderLeft: `7px solid ${hex}` }" @click="() => handleClick(hex)">
+  <section class="color-cell" :style="{ borderLeft: `7px solid ${hex}` }" @click="() => handleClick()">
     <p class="color-name">{{ name }}</p>
     <span class="color-bar red" :style="`--color: ${R}`"></span>
     <span class="color-bar green" :style="`--color: ${G}`"></span>
@@ -9,8 +9,6 @@
 </template>
 
 <script setup>
-import { getContrastColor } from '../util'
-
 const props = defineProps({
   name: String,
   R: Number,
@@ -20,34 +18,10 @@ const props = defineProps({
   handleSelect: Function
 })
 
-const handleClick = (hex) => {
-  handleCopy(hex);
-  changeBgColor(hex);
+const handleClick = () => {
   props.handleSelect && props.handleSelect();
 }
 
-const handleCopy = (hex) => {
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(hex);
-  } else {
-    const text = document.createElement('textarea');
-    text.value = hex;
-    text.style.position = 'absolute';
-    text.style.opacity = 0;
-    text.style.left = '-999999px';
-    text.style.top = '-999999px';
-    document.body.appendChild(text);
-    text.focus();
-    text.select();
-    document.execCommand('copy');
-    text.remove();
-  }
-}
-
-const changeBgColor = (hex) => {
-  document.querySelector('body').style.setProperty('--bg-color', hex);
-  document.querySelector('body').style.setProperty('--font-color', getContrastColor(hex));
-}
 </script>
 
 <style scoped>
@@ -62,7 +36,7 @@ const changeBgColor = (hex) => {
   border-radius: 1px;
   justify-items: center;
   background-color: #ffffff4d;
-  color: #000000b3;
+  color: inherit;
   position: relative;
   cursor: pointer;
   will-change: background, opacity;
