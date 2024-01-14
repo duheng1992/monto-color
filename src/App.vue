@@ -33,7 +33,7 @@ import { ref } from 'vue';
 import ColorConvert from './components/color-convert.vue';
 import ColorPanel from './components/color-panel.vue';
 
-import { redColors, yellowColors, greenColors, blueColors } from './util/const';
+import { redColors, yellowColors, greenColors, blueColors, purpleColors } from './util/const';
 import { getContrastColor } from './util'
 
 const colorList = [
@@ -41,6 +41,7 @@ const colorList = [
   { name: '黄色系', key: 'yellow', value: yellowColors },
   { name: '绿色系', key: 'green', value: greenColors },
   { name: '蓝色系', key: 'blue', value: blueColors },
+  { name: '紫色系', key: 'purple', value: purpleColors },
 ];
 
 const currentTab = ref(colorList[0]);
