@@ -9,7 +9,7 @@
         {{ color.G }}
         {{ color.B }}
       </p>
-      <ColorConvert class="color-convert" />
+      <!-- <ColorConvert class="color-convert" /> -->
     </section>
     <section class="right">
       <h1 class="sub-title">
@@ -33,7 +33,7 @@ import { ref } from 'vue';
 import ColorConvert from './components/color-convert.vue';
 import ColorPanel from './components/color-panel.vue';
 
-import { redColors, yellowColors, greenColors, blueColors, purpleColors } from './util/const';
+import { redColors, yellowColors, greenColors, blueColors, purpleColors, blackAndWhiteColors  } from './util/const';
 import { getContrastColor } from './util'
 
 const colorList = [
@@ -42,6 +42,7 @@ const colorList = [
   { name: '绿色系', key: 'green', value: greenColors },
   { name: '蓝色系', key: 'blue', value: blueColors },
   { name: '紫色系', key: 'purple', value: purpleColors },
+  { name: '黑白系', key: 'baw', value: blackAndWhiteColors },
 ];
 
 const currentTab = ref(colorList[0]);
