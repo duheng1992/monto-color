@@ -12,6 +12,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "fontmin": "^1.0.1",
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.4.5"
   }
