@@ -1,7 +1,7 @@
 <template>
   <section class="flex-layout">
     <section class="left">
-      <h1 class="main-title">中式色卡</h1>
+      <h1 class="main-title">🀄️式色卡</h1>
       <h3 class="main-subtitle">{{ color.name }}</h3>
       <p class="description">
         {{ color.hex }}
